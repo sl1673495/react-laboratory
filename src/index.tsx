@@ -59,15 +59,17 @@ function registerRoutes(components: Components) {
 function App() {
   return (
     <Router>
-      <div className="App">
+      <main className="App">
         <section className="App-content">
           <nav className="App-links">
-            <header className="App-title">React Laboratory</header>
+            <header className="App-title">
+              React Laboratory
+            </header>
             {registerLinks(components)}
           </nav>
           <section className="App-routes">{registerRoutes(components)}</section>
         </section>
-      </div>
+      </main>
     </Router>
   )
 }
