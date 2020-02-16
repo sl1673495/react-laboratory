@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import React, {useState, FC, useContext} from 'react'
 import {useRenderTimes} from '../../utils/use-render-times'
 import Intro from '../../components/Intro'
@@ -23,10 +25,10 @@ function PureChild() {
 function Pure() {
   const times = useRenderTimes()
   return (
-    <>
+    <React.Fragment>
       <section>Pure render times: {times}</section>
       <PureChild />
-    </>
+    </React.Fragment>
   )
 }
 
@@ -80,7 +82,7 @@ const GoodCase = () => {
 
 export default function PropsRerender() {
   return (
-    <>
+    <React.Fragment>
       <Intro>
         React在一个组件进行重渲染的时候，会递归的对所有以{`<Child />`}形式声明的
         子组件进行重新渲染。
@@ -97,6 +99,6 @@ export default function PropsRerender() {
       <section>
         <GoodCase />
       </section>
-    </>
+    </React.Fragment>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, {useContext} from 'react'
 
 const Context = React.createContext(0)
 
@@ -11,7 +11,7 @@ export default function ContextChildren() {
   const [count, setCount] = React.useState(0)
   return (
     <Context.Provider value={count}>
-        <Child />
+      <Child />
     </Context.Provider>
   )
 }
