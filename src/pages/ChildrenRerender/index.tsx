@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React, {useState, FC, useContext} from 'react'
-import {useRenderTimes} from '../../utils/use-render-times'
-import Intro from '../../components/Intro'
+import {useRenderTimes} from '@/utils/use-render-times'
+import Intro from '@/components/Intro'
 
 interface ChildProps {
   foo?: number
