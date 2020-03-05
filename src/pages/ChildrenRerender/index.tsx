@@ -1,6 +1,8 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import React, { useState, FC, useContext } from 'react'
-import { useRenderTimes } from '../../utils/use-render-times'
-import Intro from '../../components/Intro'
+import { useRenderTimes } from '@/utils/use-render-times'
+import Intro from '@/components/Intro'
 
 interface ChildProps {
   foo?: number
@@ -32,7 +34,7 @@ function Pure() {
 
 function BadCase() {
   const [state, setState] = useState(0)
-  const render = () => setState(prev => prev + 1)
+  const render = () => setState((prev) => prev + 1)
   return (
     <article>
       <Pure />
@@ -58,7 +60,7 @@ const GoodCaseChild: FC = () => {
 
 const GoodCaseWrap: FC = ({ children }) => {
   const [state, setState] = useState(0)
-  const render = () => setState(prev => prev + 1)
+  const render = () => setState((prev) => prev + 1)
   return (
     <GoodCaseContext.Provider value={state}>
       {children}
