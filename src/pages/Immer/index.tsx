@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import produce from 'immer'
-// import Intro from '@/components/Intro'
 
 function createItems() {
   return Array(3)
@@ -65,9 +64,9 @@ export default function Immer() {
 
   return (
     <div>
-      <button onClick={addAndChange}>加一个改一个</button>
-      <button onClick={deleteItem}>删除第一个</button>
-      <button onClick={changeDeep}>测试深层变化的路径</button>
+      <button type="button" onClick={addAndChange}>加一个改一个</button>
+      <button type="button" onClick={deleteItem}>删除第一个</button>
+      <button type="button" onClick={changeDeep}>测试深层变化的路径</button>
       {items.map((item) => <Child key={item.id} item={item} />)}
     </div>
   )
