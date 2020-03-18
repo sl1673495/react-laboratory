@@ -1,5 +1,5 @@
 const rewireAliases = require('react-app-rewire-aliases');
-const InterpolateHtmlPlugin = require('interpolate-html-plugin')
+
 const path = require('path');
 
 /* config-overrides.js */
