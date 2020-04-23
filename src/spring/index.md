@@ -3,4 +3,4 @@
 <code src="./basic.tsx" />
 
 ## 插值
-<code src="./interpolate.tsx" />
+<code src="./interpolate-range.tsx" />
